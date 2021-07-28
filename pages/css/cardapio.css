@@ -1,0 +1,896 @@
+*{
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url("fonts/BebasNeue Regular.otf");
+}
+
+body {
+  font-family: 'bebas-neue', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+ html{
+   overflow-x: hidden;
+ }
+
+/*------------------------------------------------------------------
+   	Configuração da Nav
+-------------------------------------------------------------------*/
+
+.menu {
+    width: 100%;
+    height: 86px;
+    position: fixed;
+    background-color:rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 15px rgba(0,0,0, .2);
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    z-index: 5;
+}
+#menu-center {
+    width: 980px;
+    height: 75px;
+    margin: 0 auto;
+}
+#menu-center ul {
+   position: absolute;
+    margin: 8px 0 0 0;
+    left: 40%;
+}
+#menu-center ul li a{
+		padding: 25px 35px;
+}
+
+#menu-center ul li {
+    list-style: none;
+    margin: 0 0 0 -4px;
+    display: inline;
+}
+
+.ativo, #menu-center ul li a:hover  {
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    line-height: 80px;
+	  background-color:rgba(255, 0, 0, 0.49);
+	  padding: 25px 35px;
+
+}
+
+a {
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    line-height: 80px;
+}
+
+.logo{
+  position: absolute;
+  height: 160px;
+  transition: .5s;
+  left: -70%;
+  margin-top: -120px;
+}
+
+@media (max-width: 1336px) {
+	.logo {
+		left: 10%;
+	}
+}
+
+@media (max-width: 480px) {
+	.logo {
+    height: 90px;
+    left: -60%;
+    margin-top: -200px;
+	}
+  a{
+      font-size: 15px;
+  }
+  .ativo, #menu-center ul li a:hover  {
+  padding: -20px 10px;
+  line-height: 30px;
+  font-size: 15px;
+  }
+  #menu-center ul li{
+    margin: 0 0 0 -39px;
+  }
+  #menu-center ul li a{
+  		padding: 25px 35px;
+  }
+  #menu-center ul {
+    left: 10%;
+  }
+}
+
+/*------------------------------------------------------------------
+   	Configuração Scroll Indicator
+-------------------------------------------------------------------*/
+
+/* The progress container (grey background) */
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background: #ccc;
+  z-index: 10;
+  position: fixed;
+}
+
+/* The progress bar (scroll indicator) */
+.progress-bar {
+  height: 8px;
+  background: #fdc316;
+  width: 0%;
+  position: fixed;
+}
+
+
+/*------------------------------------------------------------------
+   	Configuração barra-informações
+-------------------------------------------------------------------*/
+
+
+.sec2 {
+  width: 100%;
+  height: 300px;
+  background-color: black;
+  margin-top: -300px;
+  z-index: 1;
+}
+
+
+/*------------------------------------------------------------------
+   	Configuração Cardapio
+-------------------------------------------------------------------*/
+
+
+#fundo_cardapio{
+  position: absolute;
+  background-color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 900px;
+  z-index: 1;
+}
+
+.titulo_cardapio{
+  position: absolute;
+  margin-top: 190px;
+  font-size: 80px;
+  left: 44%;
+  color: white;
+  z-index: 2;
+}
+
+
+#example1{
+  position: absolute;
+  margin-top: 300px;
+  left: 25%;
+  z-index: 4;
+}
+
+#example1 .sp-thumbnail {
+	width: 100%;
+	padding: 8px;
+	background-color: #F0F0F0;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+@media (max-width: 1366px) {
+	#example1{
+		left: 18%;
+	}
+}
+
+#example1 .sp-thumbnail-title {
+	margin-bottom: 5px;
+	text-transform: uppercase;
+	color: #333;
+}
+
+#example1 .sp-thumbnail-description {
+	font-size: 14px;
+	color: #333;
+}
+
+@media (max-width: 860px) {
+	#example1 .hide-medium-screen {
+		display: none;
+	}
+}
+
+@media (max-width: 640px) {
+	#example1 .sp-layer {
+		font-size: 12px;
+	}
+
+	#example1 .hide-small-screen {
+		display: none;
+	}
+}
+
+@media (max-width: 500px) {
+	#example1 .sp-thumbnail {
+		text-align: center;
+	}
+
+	#example1 .sp-thumbnail-title {
+		font-size: 12px;
+		text-transform: uppercase;
+	}
+
+	#example1 .sp-thumbnail-description {
+		display: none;
+	}
+}
+
+.chama_cardapio{
+  position: absolute;
+  margin-top: -100px;
+  height: 600px;
+  width: 600px;
+  left: 48%;
+  z-index: 2;
+}
+
+@media (max-width: 480px){
+  #fundo_cardapio{
+    height: 700px;
+  }
+  .titulo_cardapio{
+    font-size: 70px;
+    left: 25%;
+  }
+  #example1{
+    left: 0.1%;
+  }
+  .chama_cardapio{
+    height: 300px;
+    width: 300px;
+    margin-top: 50px;
+    left: 56%;
+  }
+}
+
+.layer {
+  position: absolute;
+  z-index: 3;
+}
+
+#l1 {
+  bottom: 0;
+  left: 0;
+}
+
+#l2 {
+  top: 700px;
+  left: 10%;
+}
+
+
+#l3 {
+  top: 700px;
+  left: 75%;
+}
+
+
+#l4 {
+  top: 200px;
+  right: 10%;
+}
+
+
+#l5 {
+  top: 1100px;
+  left: 10%;
+}
+
+
+#l6 {
+  top: 200px;
+  left: 10%;
+}
+
+
+#l7 {
+  top: 1900px;
+  left: 15%;
+}
+
+
+#l8 {
+  top: 1200px;
+  right: 18%;
+}
+
+#l9 {
+  top: 1900px;
+  right: 5%;
+}
+
+.layer-bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+@media (max-width: 1366px) {
+	#l9 {
+		right: 5%;
+    top: 1800px;
+	}
+  #l8 {
+		right: 8%;
+	}
+  #l7 {
+		left: 19%;
+    top: 1800px;
+	}
+  #l6 {
+		left: 5%;
+	}
+  #l5 {
+		left: 15%;
+    top: 1200px;
+	}
+  #l4 {
+		right: 4%;
+	}
+  #l3 {
+		left: 80%;
+	}
+  #l2 {
+		left: 8%;
+	}
+}
+
+@media (max-width: 480px) {
+	#l9 {
+		right: 5%;
+    top: 1800px;
+	}
+  #l8 {
+		right: 1%;
+    top: 900px;
+	}
+  #l7 {
+		left: 19%;
+    top: 1800px;
+	}
+  #l6 {
+		left: -25%;
+    z-index: 1;
+	}
+  #l5 {
+		left: -30%;
+    top: 700px;
+    z-index: 2;
+	}
+  #l4 {
+		right: -15%;
+    z-index: 1;
+	}
+  #l3 {
+		left: 60%;
+    top: 550px;
+	}
+  #l2 {
+		left: -5%;
+    top: 500px;
+	}
+}
+
+/*------------------------------------------------------------------
+   	Configuração Cortado
+-------------------------------------------------------------------*/
+
+.divisão{
+  position: absolute;
+  margin-top: 400px;
+  width: 60%;
+  z-index: 2;
+}
+
+
+.divisão_2{
+  width: 60%;
+  position: absolute;
+  margin-top: 400px;
+  left:50%;
+  transform: scaleX(-1);
+  z-index: 2;
+}
+
+@media (max-width: 480px){
+  .divisão{
+    margin-top: 100px;
+  }
+  .divisão_2{
+    margin-top: 100px;
+  }
+}
+/*  Fim da configuração fundo cortado */
+
+/*------------------------------------------------------------------
+   	Configuração Cardapio Outros
+-------------------------------------------------------------------*/
+
+.fundo_cardapio2{
+  position: absolute;
+  background-color: #fdc316;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 960px;
+  width: 100%;
+  height: 1160px;
+  z-index: 1;
+}
+
+.cardapio_outros{
+  position: absolute;
+  margin-top: 1100px;
+  font-size: 100px;
+  left: 44%;
+  color: white;
+  z-index: 2;
+}
+
+.chama_cardapio2{
+  position: absolute;
+  margin-top: 820px;
+  height: 600px;
+  width: 600px;
+  left: 48%;
+  z-index: 2;
+}
+
+.flipbook-viewport{
+	overflow:hidden;
+	width:100%;
+	height:100%;
+  z-index: 3;
+}
+
+.flipbook-viewport .container{
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin:auto;
+  z-index: 3;
+}
+
+@media (max-width: 1366px) {
+	.flipbook-viewport .container {
+		left: 55%;
+    top: 72%;
+	}
+}
+
+.flipbook-viewport .flipbook{
+	width:922px;
+	height:600px;
+	left:-62%;
+	top: 750px;
+  z-index: 3;
+}
+
+.flipbook-viewport .page{
+	width:461px;
+	height:600px;
+	background-color:white;
+	background-repeat:no-repeat;
+	background-size:100% 100%;
+}
+
+.flipbook .page{
+	-webkit-box-shadow:0 0 20px rgba(0,0,0,0.2);
+	-moz-box-shadow:0 0 20px rgba(0,0,0,0.2);
+	-ms-box-shadow:0 0 20px rgba(0,0,0,0.2);
+	-o-box-shadow:0 0 20px rgba(0,0,0,0.2);
+	box-shadow:0 0 20px rgba(0,0,0,0.2);
+}
+
+.flipbook-viewport .page img{
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	margin:0;
+}
+
+.flipbook-viewport .shadow{
+	-webkit-transition: -webkit-box-shadow 0.5s;
+	-moz-transition: -moz-box-shadow 0.5s;
+	-o-transition: -webkit-box-shadow 0.5s;
+	-ms-transition: -ms-box-shadow 0.5s;
+
+	-webkit-box-shadow:0 0 20px #ccc;
+	-moz-box-shadow:0 0 20px #ccc;
+	-o-box-shadow:0 0 20px #ccc;
+	-ms-box-shadow:0 0 20px #ccc;
+	box-shadow:0 0 20px #ccc;
+}
+
+@media (max-width: 480px){
+  .fundo_cardapio2{
+    margin-top: 660px;
+    height: 1700px;
+  }
+  .cardapio_outros{
+    margin-top: 820px;
+    left: 20%;
+    font-size: 90px;
+  }
+  .chama_cardapio2{
+    width: 300px;
+    height: 300px;
+    margin-top:690px;
+    left: 50%;
+  }
+  .flipbook-viewport .container{
+    left: -75%;
+  }
+  .img_outros{
+    position: absolute;
+    background-image: url("../../images/cardapio1.jpg");
+    background-size: cover;
+    margin-top:920px;
+    left: 0.1%;
+    width: 480px;
+    height: 685px;
+    z-index: 3;
+  }
+  .img_outros2{
+    position: absolute;
+    background-image: url("../../images/cardapio2.jpg");
+    background-size: cover;
+    margin-top:1620px;
+    left: 0.1%;
+    width: 480px;
+    height: 685px;
+    z-index: 3;
+  }
+}
+
+/*------------------------------------------------------------------
+   	Configuração Cardapio - Slider
+-------------------------------------------------------------------*/
+
+/* Configuração divisão 4 */
+
+.fundo_cortado_2{
+  position: absolute;
+  margin-top: 1580px;
+  left:-1%;
+  width: 60%;
+  z-index: 1;
+}
+
+.fundo_cortado_3{
+  position: absolute;
+  margin-top: 1580px;
+  left:40%;
+  width: 60%;
+  z-index: 1;
+}
+
+@media (max-width: 1366px) {
+  .fundo_cortado_2 {
+    margin-top: 1750px;
+  }
+	.fundo_cortado_3 {
+		margin-top: 1750px;
+	}
+}
+
+@media (max-width: 480px) {
+  .fundo_cortado_2 {
+    margin-top: 2250px;
+  }
+	.fundo_cortado_3 {
+		margin-top: 2250px;
+	}
+}
+
+
+/*------------------------------------------------------------------
+   	Configuração Footer
+-------------------------------------------------------------------*/
+
+/* Botão - Home */
+
+.scrollup{
+  position: absolute;
+	width:40px;
+	height:40px;
+	text-indent:-9999px;
+  left: 96%;
+  z-index: 999;
+  margin-top: 2215px;
+}
+
+.scrollup:hover{
+	opacity:0.8;
+}
+
+@media (max-width: 480px){
+  .scrollup{
+    left: 90%;
+    margin-top: 2450px;
+  }
+}
+
+/* Imagens Footer */
+
+
+.cortado_footer{
+  position: absolute;
+  margin-top: -550px;
+  z-index: -1;
+}
+
+.cortado_footer2{
+  position: absolute;
+  margin-top: 250px;
+  left: 60%;
+  z-index: -1;
+}
+
+/*------------------------------------------------------------------
+   	Fim do Site
+-------------------------------------------------------------------*/
+
+.barra_bottom{
+  margin-top: 2100px;
+  width: 100%;
+  height: 400px;
+  background-color: black;
+  position: absolute;
+  z-index: -3;
+}
+
+.logo_footer{
+  position: absolute;
+  height: 350px;
+  width: 350px;
+  left: 44%;
+  z-index: 1;
+  margin-top: 2120px;
+}
+
+.endereço_footer{
+  position: absolute;
+  z-index: 1;
+  left: 34%;
+  margin-top: 2400px;
+  letter-spacing: 3px;
+  font-size: 20px;
+  color: white;
+}
+
+@media (max-width: 1366px) {
+	.endereço_footer {
+		left: 30%;
+	}
+}
+
+.telefone_footer{
+  position: absolute;
+  z-index: 1;
+  left: 44%;
+  margin-top: 2450px;
+  letter-spacing: 3px;
+  font-size: 20px;
+  color: white;
+}
+
+@media (max-width: 1366px) {
+	.telefone_footer {
+		left: 44%;
+    margin-top: 2440px;
+	}
+}
+
+@media (max-width: 480px) {
+  .barra_bottom{
+    margin-top: 2100px;
+    width: 100%;
+    height: 950px;
+  }
+  .logo_footer{
+    margin-top: 2730px;
+    height: 290px;
+    width: 290px;
+    left: 23%;
+  }
+  .endereço_footer {
+    left:5%;
+    letter-spacing: 1px;
+    font-size: 16px;
+    margin-top: 2970px;
+  }
+	.telefone_footer {
+		left: 29%;
+    letter-spacing: 1px;
+    font-size: 16px;
+    margin-top: 3010px;
+	}
+}
+
+/* Horario funcionamento footer */
+
+.horario_funcionamento_footer{
+  position: absolute;
+  z-index: 1;
+  left: 7%;
+  margin-top: 2280px;
+  letter-spacing: 3px;
+  font-size: 30px;
+  color: #fdc316;
+}
+
+.Ter-Qui {
+  position: absolute;
+  z-index: 1;
+  left: 2%;
+  margin-top: 2340px;
+  letter-spacing: 3px;
+  font-size: 20px;
+  color: white;
+}
+
+
+.horario-ter{
+  position: absolute;
+  z-index: 1;
+  left: 2.8%;
+  margin-top: 2390px;
+  letter-spacing: 3px;
+  font-size: 20px;
+  color: white;
+}
+
+
+.Sex-Dom {
+  position: absolute;
+  z-index: 1;
+  left: 13%;
+  margin-top: 2340px;
+  letter-spacing: 3px;
+  font-size: 20px;
+  color: white;
+}
+
+.horario-sex{
+  position: absolute;
+  z-index: 1;
+  left: 13.8%;
+  margin-top: 2390px;
+  letter-spacing: 3px;
+  font-size: 20px;
+  color: white;
+}
+
+@media (max-width: 1366px) {
+  .Ter-Qui {
+    left: 1%;
+  }
+  .horario-ter {
+    left: 1.8%;
+  }
+  .Sex-Dom {
+    left: 13%;
+  }
+	.horario-sex {
+		left: 13.8%;
+	}
+}
+
+@media (max-width: 480px) {
+  .horario_funcionamento_footer{
+    font-size: 27px;
+    letter-spacing: 3px;
+    margin-top: 2470px;
+    left: 32%;
+  }
+  .Ter-Qui {
+    left: 15%;
+    letter-spacing: 3px;
+    font-size: 18px;
+    margin-top: 2550px;
+  }
+  .horario-ter {
+    left: 18%;
+    letter-spacing: 3px;
+    font-size: 18px;
+    margin-top: 2590px;
+  }
+  .Sex-Dom {
+    left: 53%;
+    letter-spacing: 3px;
+    font-size: 18px;
+    margin-top: 2550px;
+  }
+	.horario-sex {
+    left: 56%;
+    letter-spacing: 3px;
+    font-size: 18px;
+    margin-top: 2590px;
+	}
+}
+
+/* Redes sociais do footer */
+
+.redes_sociais_footer{
+  position: absolute;
+  z-index: 1;
+  left: 85%;
+  margin-top:2280px;
+  letter-spacing: 3px;
+  font-size: 30px;
+  color: #fdc316;
+}
+
+.redes_sociais_f:hover{
+  color: red;
+}
+
+.fa-instagram{
+  position: absolute;
+  z-index: 1;
+  left: 86%;
+  margin-top: 2340px;
+}
+
+.fa-facebook{
+  position: absolute;
+  z-index: 1;
+  left: 91%;
+  margin-top: 2340px;
+}
+
+@media (max-width: 1366px) {
+  .fa-instagram {
+    left: 87%;
+  }
+	.fa-facebook {
+		left: 93%;
+	}
+}
+
+@media (max-width: 480px) {
+  .redes_sociais_footer{
+    font-size: 27px;
+    letter-spacing: 3px;
+    left: 32%;
+    margin-top: 2650px;
+  }
+  .fa-instagram{
+    left: 35%;
+    margin-top: 2720px;
+  }
+  .fa-facebook{
+    left: 53%;
+    margin-top: 2720px;
+  }
+}
+
+/*------------------------------------------------------------------
+   	Divs aleatórias
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+   	Hamburguer como o cursor do mouse
+-------------------------------------------------------------------*/

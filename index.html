@@ -1,0 +1,453 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+  <head>
+
+    <!-- Meta site -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+
+
+    <!-- Links -->
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" media="screen and (max-width:1366px)" href="css/responsive.css">
+    <link rel="stylesheet" media="screen and (max-width:480px)" href="css/mobile.css">
+    <link rel="shortcut icon" type="image/png" href="images/marca.png">
+    <link rel="stylesheet" type="text/css" href="dist/css/slider-pro.min.css" media="screen"/>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/hou4rjz.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- Java links -->
+    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="js/modernizr.custom.63321.js"></script>
+    <script type="text/javascript" src="dist/js/jquery.sliderPro.min.js"></script>
+
+    <script type="text/javascript">
+      $(function () {
+        $(document).scroll(function () {
+          var $nav = $(".navbar-fixed-top");
+          $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+        });
+     });
+    </script>
+
+    <script type="text/javascript">
+      window.onscroll = function() {myFunction()};
+        function myFunction() {
+          var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+          var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+          var scrolled = (winScroll / height) * 100;
+      document.getElementById("myBar").style.width = scrolled + "%";
+ }
+    </script>
+
+    <script type="text/javascript">
+    	$( document ).ready(function( $ ) {
+    		$( '#example1' ).sliderPro({
+    			width: 960,
+    			height: 500,
+    			arrows: true,
+    			buttons: false,
+    			waitForLayers: true,
+    			thumbnailWidth: 200,
+    			thumbnailHeight: 100,
+    			thumbnailPointer: true,
+    			autoplay: false,
+    			autoScaleLayers: false,
+    			breakpoints: {
+    				500: {
+    					thumbnailWidth: 120,
+    					thumbnailHeight: 50
+    				}
+    			}
+    		});
+    	});
+    </script>
+
+    <script type="text/javascript">
+    	$( document ).ready(function( $ ) {
+    		$( '#example5' ).sliderPro({
+    			width: 1920,
+    			height: 1100,
+    			orientation: 'horizontal',
+    			loop: false,
+    			arrows: true,
+    			buttons: false,
+    			thumbnailsPosition: 'left',
+    			thumbnailPointer: true,
+    			thumbnailWidth: 290,
+    			breakpoints: {
+    				800: {
+    					thumbnailsPosition: 'bottom',
+    					thumbnailWidth: 270,
+    					thumbnailHeight: 100
+    				},
+    				500: {
+    					thumbnailsPosition: 'bottom',
+    					thumbnailWidth: 120,
+    					thumbnailHeight: 50
+    				}
+    			}
+    		});
+    	});
+    </script>
+
+    <script>
+    (function($){
+        $(window).on("load",function(){
+            $("a[rel='m_PageScroll2id']").mPageScroll2id();
+        });
+    })(jQuery);
+    </script>
+    <!-- Styles -->
+    <!--  Titulo Site -->
+
+    <title>MolotovBBQ</title>
+
+  </head>
+
+
+  <body>
+    <div class="main_container_site">
+      <header>
+        <nav>
+          <div class="m1 menu">
+  			    <div id="menu-center">
+  			  	  <ul>
+                <li><a href="#home" class="ativo">Home</a></li>
+                <li><a href="#sobre_nos">Nossa historia</a></li>
+                <li><a href="pages/cardapio.html">Cardapio</a></li>
+                <li><a href="#fundo_happy">Happy Hour</a></li>
+                <li><a href="#fundo_contato">Chega ai</a></li>
+                <img class="logo"src="images/marca.png" alt="">
+  				    </ul>
+  			    </div>
+  		    </div>
+        </nav>
+    </header>
+
+      <main>
+
+        <section class="scroll">
+          <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+          </div>
+
+        </section>
+
+        <section class="teste_back">
+          <div class="background-top">
+          </div>
+        </section>
+
+        <section class="sec1">
+          <div id="home">
+            <div class="home_molotov">
+              <div class=""></div>
+              <div class=""></div>
+              <div class=""></div>
+              <div class=""></div>
+              <div class=""></div>
+              <div class=""></div>
+              <div class=""></div>
+              <div class=""></div>
+              <div class=""></div>
+              <div class=""></div>
+              <div class=""></div>
+              <div class=""></div>
+              <div class=""></div>
+              <div class=""></div>
+              <div class=""></div>
+              <div class=""></div>
+              <div class=""></div>
+              <div class=""></div>
+              <div class=""></div>
+              <div class=""></div>
+              <div class=""></div>
+              <div class=""></div>
+              <div class=""></div>
+              <div class=""></div>
+              <div class=""></div>
+            </div>
+            <script type="text/javascript">
+              $(document).ready(function(){
+                $('.home_molotov div').mouseover(
+                  function(){
+                    $(this).addClass('flip')
+                  })
+              })
+            </script>
+          </div>
+        </section>
+
+        <section class="historia">
+          <div id="sobre_nos">
+          </div>
+          <div class="imagens_fundo">
+            <img class="img_fundo"src="images/marca.png" alt="">
+          </div>
+          <div class="fundo_sobre_nos">
+            <h1 class="sobre_1">Bem Vindo ao <span>Molotov!</span></h1>
+            <img class="chamas" src="images/chama.png" alt="">
+          </div>
+          <div class="texto_sobre1">
+            <h6 class="texto_sobre">Temos apenas 1(um) ano de vida mas nascemos e estamos crescendo pela vontade de preparar comidas deliciosas, em porções gigantes, para você comer acompanhado(a) de grandes amigos(as)
+
+            Nosso cardápio conta com um exército de incríveis sanduíches, sempre escoltados por deliciosas batatas fritas e molhos saborosos. Também servimos o legítimo churrasco texano, defumado por cerca de 8h, assado apenas com a fumaça da lenha. Tudo isso acompanhado de um galático chopp congelante.</h6>
+          </div>
+        </section>
+
+        <section class="sec4">
+          <div class="divisão">
+            <img class="fundo_cortado_sobre" src="images/fundo_cortado_preto.png" alt="">
+          </div>
+          <div class="divisão_2">
+            <img class="fundo_cortado_sobre" src="images/fundo_cortado_preto.png" alt="">
+          </div>
+        </section>
+
+        <section class="cardapio">
+          <div id="fundo_cardapio"></div>
+          <div class="titulo_cardapio"><h3>Cardápio</h3></div>
+          <div id="example1" class="slider-pro">
+        		<div class="sp-slides">
+        			<div class="sp-slide">
+        				<img class="sp-image" src="images/foto1.jpg">
+        			</div>
+
+        			<div class="sp-slide">
+        				<img class="sp-image" src="images/foto4.jpg">
+        			</div>
+
+        			<div class="sp-slide">
+        				<img class="sp-image" src="images/foto2.jpg"/>
+        			</div>
+
+        			<div class="sp-slide">
+        				<img class="sp-image" src="images/foto7.png">
+        			</div>
+
+        		<div class="sp-thumbnails">
+        			<div class="sp-thumbnail">
+        				<div class="sp-thumbnail-title">Hamburguers</div>
+        				<div class="sp-thumbnail-description">Molotov Cocktail</div>
+        			</div>
+
+        			<div class="sp-thumbnail">
+        				<div class="sp-thumbnail-title">Massas</div>
+        				<div class="sp-thumbnail-description">Nhoque ao Ragú de Carne</div>
+        			</div>
+
+        			<div class="sp-thumbnail">
+        				<div class="sp-thumbnail-title">Assados</div>
+        				<div class="sp-thumbnail-description">Fraudinha Grelhada</div>
+        			</div>
+
+        			<div class="sp-thumbnail">
+        				<div class="sp-thumbnail-title">Porções</div>
+        				<div class="sp-thumbnail-description">Dadinho de Queijo Coalho</div>
+        			</div>
+        		</div>
+            </div>
+          </div>
+          <div class="chama_4">
+            <img class="chama_cardapio"src="images/chama.png" alt="">
+          </div>
+          <div class="veja_mais"><a class="botao_veja"href="pages/cardapio.html">Veja Mais</a></div>
+        </section>
+
+        <section class="hero-area bg-primary" id="parallax">
+            <div class="layer-bg w-100">
+          </div>
+          <div class="layer" id="l2">
+            <img src="images/burger_molo.png" alt="bg-shape">
+          </div>
+          <div class="layer" id="l3">
+            <img src="images/carne.png" alt="bg-shape">
+          </div>
+          <div class="layer" id="l4">
+            <img src="images/refri.png" alt="bg-shape">
+          </div>
+          <div class="layer" id="l5">
+            <img src="images/carne.png" alt="bg-shape">
+          </div>
+          <div class="layer" id="l6">
+            <img src="images/chopp_png.png" alt="bg-shape">
+          </div>
+          <div class="layer" id="l7">
+            <img src="images/batata.png" alt="bg-shape">
+          </div>
+          <div class="layer" id="l8">
+            <img src="images/burger_molo.png" alt="bg-shape">
+          </div>
+          <div class="layer" id="l9">
+            <img src="images/chopp_png.png" alt="bg-shape">
+          </div>
+        </section>
+
+        <section class="sec7">
+          <div class="divisão_4">
+            <img class="fundo_cortado_2" src="images/fundo_cortado_amarelo.png" alt="">
+            <img class="fundo_cortado_3" src="images/fundo_cortado_amarelo.png" alt="">
+          </div>
+        </section>
+
+        <section class="sec8">
+          <div class="hh_ti"><h3 class="titulo_hh">Happy Hour</h3></div>
+          <div id="fundo_happy"></div>
+          <div class="slides">
+            <input type="radio" name="r" id="r1" checked>
+            <input type="radio" name="r" id="r2">
+            <input type="radio" name="r" id="r3">
+            <div class="slide_happy_hour s1">
+              <img class="hh1"src="images/happy_hour_3.png" alt="">
+            </div>
+            <div class="slide_happy_hour">
+              <img class="hh2"src="images/rangos1.png" alt="">
+            </div>
+            <div class="slide_happy_hour">
+              <img class="hh3"src="images/chopp1.png" alt="">
+              </div>
+            </div>
+          </div>
+
+          <div class="nav_happy_hour">
+            <label for="r1" class="bar"></label>
+            <label for="r2" class="bar"></label>
+            <label for="r3" class="bar"></label>
+          </div>
+
+          <div class="hh_chama">
+            <img class="chama_hh"src="images/chama_branca.png" alt="">
+          </div>
+        </section>
+
+        <section class="sec9">
+          <div class="divisão_5">
+            <img class="fundo_cortado_4" src="images/fundo_cortado_vermelho_2.png" alt="">
+            <img class="fundo_cortado_5" src="images/fundo_cortado_vermelho_2.png" alt="">
+          </div>
+        </section>
+
+        <section class="sec10">
+          <div class="texto_insta">
+            <h1 class="texto_insta_1"><span class="span_insta">#curta </span>com a gente!</h1>
+            <h2 class="texto_insta_2">Compartilhe sua experiência com o @MolotovBBQ</h2>
+          </div>
+          <div class="instagram">
+            <div class="elfsight-app-42adbfc6-6b83-4288-8f98-f88a1dbed605"></div>
+          </div>
+          <div class="chama_insta">
+            <img class="chama_2" src="images/chama.png" alt="">
+          </div>
+        </section>
+
+        <section class="sec10_1">
+          <div class="background_insta">
+            <img class="papel_fundo" src="images/papel_fundo_1.png" alt="">
+          </div>
+        </section>
+
+        <section class="sec11">
+          <div class="divisão_6">
+            <img class="fundo_cortado_6" src="images/bandeja_cortado.png" alt="">
+            <img class="fundo_cortado_7" src="images/bandeja_cortado.png" alt="">
+          </div>
+        </section>
+
+
+     <div class="bora">
+        <section class="sec_cont">
+          <div class="contato">
+            <h1 class="papo_1">Bora bater um <span class="span_contato">papo?</span></h1>
+          </div>
+          <div class="chama_contato">
+            <img class="chama_3" src="images/chama.png" alt="">
+          </div>
+        </section>
+
+        <section class="2">
+          <div id="fundo_contato">
+          </div>
+        </section>
+
+        <section class="sec12">
+          <div class="contato">
+            <div class="formulario">
+              <form action="/action_page.php">
+                <label for="fname">Nome</label>
+                <input type="text" id="nome" name="seunome" placeholder="Nome..">
+
+                <label for="ename">Email</label>
+                <input type="text" id="email" name="seuemail" placeholder="Email..">
+
+                <label for="lname">Telefone</label>
+                <input type="text" id="telefone" name="seutelefone" placeholder="Telefone..">
+
+                <label for="subject">Mensagem</label>
+                <textarea id="subject" name="subject" placeholder="Digite algo.." style="height:200px"></textarea>
+
+                <input type="submit" value="Enviar">
+                </form>
+            </div>
+            <div id="map">
+              <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1072.8521436005449!2d-49.227334158069866!3d-16.726717543985657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935ef11cccf4c971%3A0x8db4deff49202bc9!2sMolotov+BBQ+-+Burguer+e+Grill!5e0!3m2!1spt-BR!2sbr!4v1559862054025!5m2!1spt-BR!2sbr" width="988" height="565" frameborder="0" style="border:0" allowfullscreen></iframe></p>
+            </div>
+          </div>
+        </section>
+     </div>
+
+   </main>
+
+   <footer>
+
+     <section class="sec17">
+       <div class="bloco_opac">
+         <img class="cortado_footer" src="images/fundo_cortado_amarelo.png" alt="">
+          <img class="cortado_footer2"src="images/fundo_cortado_amarelo.png" alt="">
+       </div>
+     </section>
+
+     <section class="sec20">
+       <div class="barra_bottom">
+       </div>
+     </section>
+
+     <section class="sec21">
+       <div class="logo-info">
+         <a href="#home"><img class="logo_footer" src="images/marca.png" alt=""></a>
+       </div>
+       <div class="titulos_footer">
+         <h1 class="endereço_footer">Av.dos Flamboyants, Qd. 18, Lt 16
+         Parque das Laranjeiras, Goiânia/GO.</h1>
+         <h1 class="telefone_footer">(62)3093-3744 | 9 8582-3207</h1>
+           <p class="Ter-Qui">Terça à Quinta</p>
+           <p class="horario-ter">18h às 21h</p>
+           <p class="Sex-Dom">Sexta à Domingo</p>
+           <p class="horario-sex">18h às 20h</p>
+         <h1 class="horario_funcionamento_footer">Funcionamento</h1>
+         <h1 class="redes_sociais_footer">Redes Sociais</h1>
+       </div>
+       <div class="redes_sociais_f">
+         <a href="https://www.instagram.com/molotovbbq/" class="fa fa-instagram" style="font-size:55px;color:white"></a>
+         <a href="https://pt-br.facebook.com/molotovburguer/" class="fa fa-facebook" style="font-size:55px;color:white"></a>
+       </div>
+
+     </section>
+
+     <section class="sec22">
+         <a href="#home"><img class="scrollup"src="images/icon_top_2.png" alt=""></a>
+     </section>
+
+     </section>
+   </footer>
+
+   <!-- Main Script -->
+   <script src="js/script.js"></script>
+
+    </div>
+
+  </body>
+</html>

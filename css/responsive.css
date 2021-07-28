@@ -1,0 +1,915 @@
+*{
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: 'bebas-neue', sans-serif;
+}
+
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url("fonts/BebasNeue Regular.otf");
+}
+
+body {
+  font-family: 'bebas-neue', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+ html{
+   overflow-x: hidden;
+ }
+
+/*------------------------------------------------------------------
+   	Configuração da Nav
+-------------------------------------------------------------------*/
+
+.menu {
+    width: 100%;
+    height: 86px;
+    position: fixed;
+    background-color:rgba(0, 0, 0, 0.67);
+    box-shadow: 0 5px 15px rgba(0,0,0, .2);
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    z-index: 5;
+}
+#menu-center {
+    width: 980px;
+    height: 75px;
+    margin: 0 auto;
+}
+#menu-center ul {
+   position: absolute;
+    margin: 8px 0 0 0;
+    left: 40%;
+}
+#menu-center ul li a{
+		padding: 32px 40px;
+}
+#menu-center ul li {
+    list-style: none;
+    margin: 0 0 0 -4px;
+    display: inline;
+
+}
+.active, #menu-center ul li a:hover  {
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    line-height: 80px;
+	  background-color:rgba(255, 0, 0, 0.49);
+	  padding: 25px 35px;
+
+}
+a {
+    font-size: 22px;
+    color: white;
+    text-decoration: none;
+    line-height: 80px;
+}
+
+.logo{
+  position: absolute;
+  height: 160px;
+  transition: .5s;
+  left: -70%;
+  margin-top: -120px;
+}
+
+/*------------------------------------------------------------------
+   	Configuração Scroll Indicator
+-------------------------------------------------------------------*/
+
+/* The progress container (grey background) */
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background: #ccc;
+  z-index: 10;
+  position: fixed;
+}
+
+/* The progress bar (scroll indicator) */
+.progress-bar {
+  height: 8px;
+  background: #fdc316;
+  width: 0%;
+  position: fixed;
+}
+
+
+
+/*------------------------------------------------------------------
+   	Configuração Home
+-------------------------------------------------------------------*/
+
+#home{
+  width: 100%;
+  height: 155px;
+  z-index: -1;
+}
+
+.home_molotov div {
+  position: relative;
+  display: block;
+  float: left;
+  width: 20%;
+  height: 20vh;
+}
+
+.home_molotov div:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/home2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  transform-style: preserve-3d;
+  transform-origin: top;
+  transform: perspective(1000px) rotateX(0deg) translateY(0);
+  transition: 0.5s linear;
+}
+
+.home_molotov div.flip:before {
+  transform: perspective(1000px) rotateX(90deg) translateY(-50%);
+}
+
+.home_molotov div:after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/home3.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  transform-style: preserve-3d;
+  transform-origin: bottom;
+  transform: perspective(1000px) rotateX(-90deg) translateY(50%);
+  transition: 0.5s linear;
+}
+
+.home_molotov div.flip:after {
+  transform: perspective(1000px) rotateX(0deg) translateY(0);
+}
+
+
+/*------------------------------------------------------------------
+   	Configuração barra-informações
+-------------------------------------------------------------------*/
+
+/*
+.background-top{
+  background-color: black;
+  width: 100%;
+  height: 110px;
+  z-index: -1;
+  position: absolute;
+  margin-top: 968px;
+}
+*/
+
+.sec2 {
+  width: 100%;
+  height: 300px;
+  background-color: black;
+  margin-top: -200px;
+  z-index: 1;
+}
+
+/*------------------------------------------------------------------
+   	Configuração Sobre nós
+-------------------------------------------------------------------*/
+
+#sobre_nos{
+  height: 800px;
+  width: 100%;
+  height: 400px;
+  background-color: black;
+  position: absolute;
+  margin-top: 409px;
+  z-index: 1;
+}
+
+.fundo_sobre_nos{
+  float: right;
+  width: 100%;
+  margin-top: -600px;
+}
+
+.img_fundo {
+  position: absolute;
+  margin-top: 500px;
+  left: 10%;
+  width: 400px;
+  height: 400px;
+  z-index: 3;
+}
+
+.sobre_1 {
+  position: absolute;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  font-family: 'bebas-neue', sans-serif;
+  left: 55%;
+  font-size: 3em;
+  margin-top: 640px;
+  z-index: 3;
+}
+
+h1 span {
+  color: red;
+}
+
+.chamas {
+  position: absolute;
+  height: 600px;
+  width: 600px;
+  left: 64%;
+  margin-top: 350px;
+  z-index: 3;
+}
+
+.texto_sobre {
+  position: absolute;
+  font-family: 'bebas-neue', sans-serif;
+  font-size: 25px;
+  text-transform: uppercase;
+  text-align: left;
+  font-kerning: 10px;
+  letter-spacing: 1px;
+  color: #fdc316;
+  margin-left: 550px;
+  padding-right: 100px;
+  margin-top: 590px;
+  z-index: 3;
+}
+
+/* Fim da configuração -Sobre Nós- */
+
+/*------------------------------------------------------------------
+   	Configuração Cortado_sobre
+-------------------------------------------------------------------*/
+
+.divisão{
+  position: absolute;
+  margin-top: 400px;
+  width: 60%;
+  z-index: 2;
+}
+
+.divisão_2{
+  width: 60%;
+  position: absolute;
+  margin-top: 400px;
+  left:50%;
+  transform: scaleX(-1);
+  z-index: 2;
+}
+
+/*  Fim da configuração fundo cortado_sobre */
+
+/*------------------------------------------------------------------
+   	Configuração Cardapio
+-------------------------------------------------------------------*/
+
+
+.fundo_cardapio{
+  position: absolute;
+  background-color: #fdc316;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 1000px;
+  margin-top: 950px;
+  z-index: 1;
+}
+
+.titulo_cardapio{
+  position: absolute;
+  margin-top: 1090px;
+  font-size: 70px;
+  left: 41%;
+  color: white;
+  z-index: 2;
+}
+
+#example1{
+  position: absolute;
+  margin-top: 1250px;
+  left: 14%;
+  z-index: 4;
+}
+
+#example1 .sp-thumbnail {
+	width: 100%;
+	padding: 8px;
+	background-color: #F0F0F0;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#example1 .sp-thumbnail-title {
+  font-size: 20px;
+	margin-bottom: 5px;
+	text-transform: uppercase;
+	color: #333;
+}
+
+#example1 .sp-thumbnail-description {
+	font-size: 18px;
+	color: #333;
+}
+
+@media (max-width: 860px) {
+	#example1 .hide-medium-screen {
+		display: none;
+	}
+}
+
+@media (max-width: 640px) {
+	#example1 .sp-layer {
+		font-size: 12px;
+	}
+
+	#example1 .hide-small-screen {
+		display: none;
+	}
+}
+
+@media (max-width: 500px) {
+	#example1 .sp-thumbnail {
+		text-align: center;
+	}
+
+	#example1 .sp-thumbnail-title {
+		font-size: 12px;
+		text-transform: uppercase;
+	}
+
+	#example1 .sp-thumbnail-description {
+		display: none;
+	}
+}
+
+.chama_cardapio{
+  position: absolute;
+  margin-top: 810px;
+  height: 600px;
+  width: 600px;
+  left: 41%;
+  z-index: 2;
+}
+
+.veja_mais{
+  position: absolute;
+  width: 120px;
+  height: 70px;
+  margin-top: 1850px;
+  left: 47%;
+  z-index: 3;
+  background-color: #F0F0F0;
+  border-radius: 20px;
+  font-size: 20px;
+}
+
+.veja_mais:hover{
+  background-color: red;
+  color: white;
+}
+
+.botao_veja{
+  position: relative;
+  text-align: center;
+  top: -4px;
+  left: 23px;
+  color: black;
+}
+
+.layer {
+  position: absolute;
+  z-index: 3;
+}
+
+#l1 {
+  bottom: 0;
+  left: 0;
+}
+
+#l2 {
+  top: 1400px;
+  left: 5%;
+}
+
+#l3 {
+  top: 1400px;
+  left: 75%;
+}
+
+#l4 {
+  top: 1700px;
+  right: 1%;
+}
+
+#l5 {
+  top: 2000px;
+  left: 5%;
+}
+
+#l6 {
+  top: 2350px;
+  left:3%;
+}
+
+#l7 {
+  top: 1700px;
+  left: 3%;
+}
+
+#l8 {
+  top: 2000px;
+  right: 5%;
+}
+
+#l9 {
+  top: 3100px;
+  right: 1%;
+}
+
+.layer-bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+/*------------------------------------------------------------------
+   	Configuração Cardapio - Slider
+-------------------------------------------------------------------*/
+
+/* Configuração divisão 4 */
+
+.fundo_cortado_2{
+  position: absolute;
+  margin-top: 1620px;
+  left:-1%;
+  width: 60%;
+  z-index: 2;
+}
+
+.fundo_cortado_3{
+  position: absolute;
+  margin-top: 1620px;
+  left:40%;
+  width: 60%;
+  z-index: 2;
+}
+
+/* Fim da configuração divisão 4 */
+
+/*------------------------------------------------------------------
+   	Configuração Happy Hour
+-------------------------------------------------------------------*/
+.fundo_happy {
+  position: absolute;
+  background-color: red;
+  width: 100%;
+  height: 1000px;
+  margin-top: 1940px;
+  z-index: -2;
+}
+
+.nav_happy_hour{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  margin-top: 2020px;
+  z-index: 3;
+}
+
+.bar {
+  width: 50px;
+  height: 10px;
+  border: 2px solid white;
+  margin: 6px;
+  cursor: pointer;
+}
+
+.bar:hover{
+  background: white;
+}
+
+input[name="r"]{
+  position: absolute;
+  visibility: hidden;
+}
+
+.slides{
+  width: 500%;
+  height: 500px;
+  display: flex;
+}
+
+.slide_happy_hour {
+  width: 20%;
+  transition: 0.6s;
+  margin-top: 1350px;
+  z-index: 2;
+}
+
+
+#r1:checked ~ .s1{
+  margin-left: 0;
+}
+
+#r2:checked ~ .s1{
+  margin-left: -20%;
+}
+
+#r3:checked ~ .s1{
+  margin-left: -40%;
+}
+
+.hh1 {
+  position: relative;
+  width: 80%;
+  height: 700px;
+  left: 10%;
+  margin-top: 400px;
+}
+
+.hh2{
+  position: relative;
+  width: 70%;
+  height: 700px;
+  left: 20%;
+  margin-top: 400px;
+}
+
+.hh3{
+  position: relative;
+  width: 70%;
+  height: 700px;
+  left: 18%;
+  margin-top: 400px;
+}
+
+.titulo_hh{
+  font-family: 'bebas-neue', sans-serif;
+  position: absolute;
+  margin-top: 2120px;
+  font-size: 90px;
+  left: 39%;
+  color: #fdc316;
+  z-index: 2;
+}
+
+.chama_hh{
+  position: absolute;
+  margin-top: 840px;
+  height: 600px;
+  width: 600px;
+  left: 46%;
+  z-index: 2;
+}
+
+/* Fim da configuração Happy Hour */
+
+/* Configuração divisão 5 */
+
+.fundo_cortado_4{
+  position: absolute;
+  z-index: -2;
+  margin-top: 1500px;
+  left: -5%;
+  transform: scaleX(-1);
+}
+
+.fundo_cortado_5{
+  position: absolute;
+  z-index: -2;
+  margin-top: 1500px;
+  left: 50%;
+}
+/* Fim da configuração divisão 5 */
+
+/* Configuração Instagram */
+
+.instagram{
+  position: absolute;
+  margin-top: 120px;
+  height: 500px;
+  width: 100%;
+  z-index: 1;
+  padding-bottom: -200px;
+}
+
+.texto_insta{
+  margin-top: 2210px;
+  font-family: 'bebas-neue', sans-serif;
+  text-align: center;
+  color: #fdc316;
+  font-size: 40px;
+  font-style: normal;
+}
+span .span_insta{
+  color: #fdc316;
+}
+
+.chama_2{
+  position: absolute;
+  height: 600px;
+  width: 600px;
+  left: 47%;
+  margin-top: -410px;
+}
+
+.papel_fundo {
+  margin-top: -300px;
+  position: absolute;
+  left: -400px;
+  z-index: -10;
+  opacity: 0.3;
+  padding-bottom: -200px;
+}
+
+/* Configuração divisão 6 */
+
+.fundo_cortado_6{
+  position: absolute;
+  margin-top: 100px;
+  z-index: 0;
+}
+
+.fundo_cortado_7{
+  position: absolute;
+  margin-top: 100px;
+  left: 88%;
+  transform: scaleX(-1);
+  z-index: 0;
+
+}
+
+/* Configuraçao google maps */
+
+#map {
+  position: absolute;
+  margin-top: 50px;
+  z-index: 1;
+  width: 788px;
+  height: 465px;
+}
+
+/* Fim config google maps */
+
+/* Configuracao fundo - Contato */
+
+.fundo_contato{
+  position: absolute;
+  background-color: #fdc316;
+  width: 100%;
+  height: 800px;
+  margin-top: -200px;
+  z-index: -1;
+}
+
+/* Fim config fundo - Contato */
+
+/* Config Formulario */
+
+.formulario{
+  position: absolute;
+  margin-top: 50px;
+  left: 52%;
+  border-radius: 5px;
+  background-color: #423d3d;
+  padding: 20px;
+  width: 614px;
+  z-index: 2;
+}
+
+input[type=text], textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid black;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #fdc316;
+  color: black;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: red;
+}
+
+/* Fim config formulario */
+
+/* Config Titulo Contato */
+
+.span_contato{
+  color: red;
+}
+
+.papo_1{
+  text-align: center;
+  margin-top: 800px;
+  font-size: 4rem;
+  z-index: 1;
+  color: white;
+}
+
+.chama_3{
+  position: absolute;
+  margin-top: -350px;
+  height: 600px;
+  width: 600px;
+  left: 48%;
+  z-index: 1;
+}
+
+/*------------------------------------------------------------------
+   	Configuração Footer
+-------------------------------------------------------------------*/
+
+/* Botão - Home */
+
+.scrollup{
+  position: absolute;
+	width:40px;
+	height:40px;
+	text-indent:-9999px;
+  left: 96%;
+  z-index: 999;
+  margin-top: 800px;
+}
+
+.scrollup:hover{
+	opacity:0.8;
+}
+
+/* Imagens Footer */
+
+
+.cortado_footer{
+  position: absolute;
+  margin-top: 150px;
+  z-index: -1;
+}
+
+.cortado_footer2{
+  position: absolute;
+  margin-top: 150px;
+  left: 60%;
+  z-index: -1;
+}
+
+/*------------------------------------------------------------------
+   	Fim do Site
+-------------------------------------------------------------------*/
+
+.barra_bottom{
+  margin-top: 700px;
+  width: 100%;
+  height: 400px;
+  background-color: black;
+  position: absolute;
+  z-index: -3;
+}
+
+.logo_footer{
+  position: absolute;
+  height: 350px;
+  width: 350px;
+  left: 42%;
+  z-index: 1;
+  margin-top: 700px;
+}
+
+.endereço_footer{
+  position: absolute;
+  z-index: 1;
+  left: 28%;
+  margin-top: 1000px;
+  letter-spacing: 3px;
+  font-size: 20px;
+  color: white;
+}
+
+.telefone_footer{
+  position: absolute;
+  z-index: 1;
+  left: 41%;
+  margin-top: 1050px;
+  letter-spacing: 3px;
+  font-size: 20px;
+  color: white;
+}
+
+/* Horario funcionamento footer */
+
+.horario_funcionamento_footer{
+  position: absolute;
+  z-index: 1;
+  left: 6%;
+  margin-top: 850px;
+  letter-spacing: 3px;
+  font-size: 27px;
+  color: #fdc316;
+}
+
+.Ter-Qui {
+  position: absolute;
+  z-index: 1;
+  left: 1%;
+  margin-top: 930px;
+  letter-spacing: 3px;
+  font-size: 18px;
+  color: white;
+}
+
+.horario-ter{
+  position: absolute;
+  z-index: 1;
+  left: 2%;
+  margin-top: 980px;
+  letter-spacing: 3px;
+  font-size: 18px;
+  color: white;
+}
+
+.Sex-Dom {
+  position: absolute;
+  z-index: 1;
+  left: 13%;
+  margin-top: 930px;
+  letter-spacing: 3px;
+  font-size: 18px;
+  color: white;
+}
+
+.horario-sex{
+  position: absolute;
+  z-index: 1;
+  left: 13.8%;
+  margin-top: 980px;
+  letter-spacing: 3px;
+  font-size: 18px;
+  color: white;
+}
+
+/* Redes sociais do footer */
+
+.redes_sociais_footer{
+  position: absolute;
+  z-index: 1;
+  left: 85%;
+  margin-top: 850px;
+  letter-spacing: 3px;
+  font-size: 27px;
+  color: #fdc316;
+}
+
+.redes_sociais_f:hover{
+  color: red;
+}
+
+.fa-instagram{
+  position: absolute;
+  z-index: 1;
+  left: 86%;
+  margin-top: 900px;
+}
+
+.fa-facebook{
+  position: absolute;
+  z-index: 1;
+  left: 93%;
+  margin-top: 900px;
+}
+
+/*------------------------------------------------------------------
+   	Divs aleatórias
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+   	Hamburguer como o cursor do mouse
+-------------------------------------------------------------------*/

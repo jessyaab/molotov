@@ -1,0 +1,819 @@
+*{
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url("fonts/BebasNeue Regular.otf");
+}
+
+body {
+  font-family: 'bebas-neue', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+ html{
+   overflow-x: hidden;
+ }
+
+/*------------------------------------------------------------------
+   	Configuração da Nav
+-------------------------------------------------------------------*/
+
+.menu {
+    width: 100%;
+    height: 75px;
+    position: fixed;
+    background-color:rgba(255, 255, 255, .2);
+    box-shadow: 0 5px 15px rgba(0,0,0, .2);
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    z-index: 2;
+}
+#menu-center {
+    width: 980px;
+    height: 75px;
+    margin: 0 auto;
+}
+#menu-center ul {
+    margin: 0 0 0 0;
+}
+#menu-center ul li a{
+		padding: 32px 40px;
+}
+#menu-center ul li {
+    list-style: none;
+    margin: 0 0 0 -4px;
+    display: inline;
+
+}
+.active, #menu-center ul li a:hover  {
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    line-height: 80px;
+	  background-color: red;
+	  padding: 25px 35px;
+
+}
+a {
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    line-height: 80px;
+}
+
+/*------------------------------------------------------------------
+   	Configuração Scroll Indicator
+-------------------------------------------------------------------*/
+
+/* The progress container (grey background) */
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background: #ccc;
+  z-index: 10;
+  position: fixed;
+}
+
+/* The progress bar (scroll indicator) */
+.progress-bar {
+  height: 8px;
+  background: #4caf50;
+  width: 0%;
+  position: fixed;
+}
+
+
+
+/*------------------------------------------------------------------
+   	Configuração Home
+-------------------------------------------------------------------*/
+
+#home{
+  width: 100%;
+  height: 500px;
+}
+
+.home_molotov div {
+  position: relative;
+  display: block;
+  float: left;
+  width: 20%;
+  height: 20vh;
+}
+
+.home_molotov div:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/foto6.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  transform-style: preserve-3d;
+  transform-origin: top;
+  transform: perspective(1000px) rotateX(0deg) translateY(0);
+  transition: 0.5s linear;
+}
+
+.home_molotov div.flip:before {
+  transform: perspective(1000px) rotateX(90deg) translateY(-50%);
+}
+
+.home_molotov div:after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/foto2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  transform-style: preserve-3d;
+  transform-origin: bottom;
+  transform: perspective(1000px) rotateX(-90deg) translateY(50%);
+  transition: 0.5s linear;
+}
+
+.home_molotov div.flip:after {
+  transform: perspective(1000px) rotateX(0deg) translateY(0);
+}
+
+
+
+
+/*------------------------------------------------------------------
+   	Configuração barra-informações
+-------------------------------------------------------------------*/
+
+.sec2 {
+  width: 100%;
+  height: 150px;
+  background-color: black;
+  margin-top: -50px;
+}
+
+section .sec3 {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+}
+
+/*------------------------------------------------------------------
+   	Configuração Sobre nós
+-------------------------------------------------------------------*/
+
+.fundo_1{
+  position: absolute;
+  margin-top: -672px;
+  z-index: -1;
+}
+
+.fundo_2{
+  position: absolute;
+  margin-top: -672px;
+  left: 49%;
+  z-index: -1;
+}
+
+.fundo_3{
+  position: absolute;
+  margin-top: -300px;
+  left: 49%;
+  z-index: -1;
+}
+
+.fundo_4{
+  position: absolute;
+  margin-top: -300px;
+  z-index: -1;
+}
+
+.fundo_sobre_nos{
+  float: right;
+  width: 100%;
+  margin-top: -672px;
+}
+
+.img_fundo {
+    z-index: 1;
+}
+
+.sobre_1 {
+  position: absolute;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  font-family: 'bebas-neue', sans-serif;
+  left: 61%;
+  font-size: 3em;
+  margin-top: 80px;
+}
+
+h1 span {
+  color: red;
+}
+
+.chamas {
+  position: absolute;
+  height: 300px;
+  width: 300px;
+  left: 74%;
+  margin-top:-60px;
+}
+
+.texto_sobre {
+  font-family: 'bebas-neue', sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: orange;
+  margin-left: 850px;
+  padding-right: 100px;
+  margin-top: -500px;
+}
+
+/* Fim da configuração -Sobre Nós- */
+
+/*------------------------------------------------------------------
+   	Configuração Cortado_sobre
+-------------------------------------------------------------------*/
+
+section .divisão{
+  position: absolute;
+  margin-top: 160px;
+  width: 100%;
+}
+
+section .divisão_2{
+  position: absolute;
+  margin-top: 160px;
+  left:50%;
+  transform: scaleX(-1);
+}
+
+/*  Fim da configuração fundo cortado_sobre */
+
+/*------------------------------------------------------------------
+   	Configuração Cardapio
+-------------------------------------------------------------------*/
+
+
+.fundo_cardapio{
+  position: absolute;
+  background-image: url("../images/molotov.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 1000px;
+  margin-top: 500px;
+  z-index: -1;
+}
+
+/*------------------------------------------------------------------
+   	Configuração Cardapio - Slider
+-------------------------------------------------------------------*/
+
+.nav_cardapio{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  margin-top: 900px;
+  z-index: 2;
+}
+
+.bar_cardapio{
+  width: 50px;
+  height: 10px;
+  border: 2px solid red;
+  margin: 6px;
+  cursor: pointer;
+}
+
+.bar_cardapio:hover{
+  background: red;
+}
+
+input[name="r"]{
+  position: absolute;
+  visibility: hidden;
+}
+
+.slides_cardapio{
+  width: 500%;
+  height: 500px;
+  display: flex;
+}
+
+
+#r4:checked ~ .s1{
+  margin-left: 0;
+}
+
+#r5:checked ~ .s1{
+  margin-left: -20%;
+}
+
+.fundo_cortado_cardapio{
+  position: absolute;
+  margin-top: 900px;
+}
+
+.fundo_cortado_cardapio_2{
+  position: absolute;
+  margin-top: 900px;
+  left:50%;
+  transform: scaleX(-1);
+}
+
+/* Fim da configuração cardapio */
+
+/* Configuração divisão 4 */
+
+.fundo_cortado_2{
+  position: absolute;
+  margin-top: 890px;
+  left:60%;
+  height: 320px;
+  z-index: -1;
+}
+
+.fundo_cortado_3{
+  position: absolute;
+  margin-top: 890px;
+  left:79%;
+  height: 320px;
+  z-index: -1;
+}
+
+.fundo_cortado_3_1{
+  position: absolute;
+  margin-top: 890px;
+  left:55%;
+  height: 320px;
+  z-index: -1;
+}
+
+.fundo_cortado_3_2{
+  position: absolute;
+  margin-top: 890px;
+  left:35%;
+  height: 320px;
+  z-index: -1;
+}
+
+.fundo_cortado_3_3{
+  position: absolute;
+  margin-top: 890px;
+  left:15%;
+  height: 320px;
+  z-index: -1;
+}
+
+.fundo_cortado_3_4{
+  position: absolute;
+  margin-top: 890px;
+  left:5%;
+  height: 320px;
+  z-index: -1;
+}
+
+.fundo_cortado_3_5{
+  position: absolute;
+  margin-top: 890px;
+  transform: scaleX(-1);
+  height: 320px;
+  z-index: -1;
+}
+
+/* Fim da configuração divisão 4 */
+
+/*------------------------------------------------------------------
+   	Configuração Happy Hour
+-------------------------------------------------------------------*/
+
+.nav_happy_hour{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  margin-top: 1500px;
+}
+
+.bar {
+  width: 50px;
+  height: 10px;
+  border: 2px solid white;
+  margin: 6px;
+  cursor: pointer;
+}
+
+.bar:hover{
+  background: white;
+}
+
+input[name="r"]{
+  position: absolute;
+  visibility: hidden;
+}
+
+.slides{
+  width: 500%;
+  height: 500px;
+  display: flex;
+}
+
+.slide_happy_hour {
+  width: 20%;
+  transition: 0.6s;
+  margin-top: 1180px;
+  z-index: -2;
+}
+
+.slide img{
+  width: 100%;
+  height: 100%;
+}
+
+#r1:checked ~ .s1{
+  margin-left: 0;
+}
+
+#r2:checked ~ .s1{
+  margin-left: -20%;
+}
+
+#r3:checked ~ .s1{
+  margin-left: -40%;
+}
+
+.hh1 {
+  width: 100%;
+  height: 1000px;
+}
+
+.hh2{
+  width: 100%;
+  height: 1000px;
+
+}
+
+.hh3{
+  width: 100%;
+  height: 1000px;
+}
+
+
+/* Fim da configuração Happy Hour */
+
+/* Configuração divisão 5 */
+
+.fundo_cortado_4{
+  position: absolute;
+  z-index: -3;
+  margin-top: 1110px;
+
+}
+
+.fundo_cortado_5{
+  position: absolute;
+  z-index: -3;
+  margin-top: 1110px;
+  left: 50%;
+}
+/* Fim da configuração divisão 5 */
+
+/* Configuração Instagram */
+
+.instagram{
+  position: absolute;
+  margin-top: 120px;
+  height: 500px;
+  width: 100%;
+  z-index: 1;
+  padding-bottom: -200px;
+}
+
+.texto_insta{
+  margin-top: 1840px;
+  font-family: 'bebas-neue', sans-serif;
+  text-align: center;
+  color: #fdc316;
+  font-size: 40px;
+  font-style: normal;
+}
+span .span_insta{
+  color: #fdc316;
+}
+
+.chama_2{
+  position: absolute;
+  height: 600px;
+  width: 600px;
+  left: 47%;
+  margin-top: -410px;
+}
+
+.papel_fundo {
+  margin-top: -200px;
+  position: absolute;
+  left: -400px;
+  z-index: -10;
+  opacity: 0.3;
+  padding-bottom: -200px;
+}
+
+/* Configuração divisão 6 */
+
+.fundo_cortado_6{
+  position: absolute;
+  margin-top: 300px;
+  z-index: 0;
+}
+
+.fundo_cortado_7{
+  position: absolute;
+  margin-top: 300px;
+  left: 62%;
+  transform: scaleX(-1);
+  z-index: 0;
+
+}
+
+/* Configuraçao google maps */
+
+#map {
+  position: absolute;
+  margin-top: 50px;
+  z-index: 1;
+}
+
+/* Fim config google maps */
+
+/* Configuracao fundo - Contato */
+
+.fundo_5{
+  position: absolute;
+  margin-top: -200px;
+  z-index: -2;
+  left: 50%;
+}
+
+.fundo_6{
+  position: absolute;
+  margin-top: -200px;
+  z-index: -2;
+}
+
+.fundo_7{
+  position: absolute;
+  margin-top: 1200px;
+  z-index: -1;
+  left: 50%;
+}
+
+/* Fim config fundo - Contato */
+
+/* Config Formulario */
+
+.formulario{
+  position: absolute;
+  margin-top: 50px;
+  left: 51.5%;
+  border-radius: 5px;
+  background-color: #423d3d;
+  padding: 20px;
+  width: 900px;
+}
+
+input[type=text], textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid black;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #fdc316;
+  color: black;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: red;
+}
+
+/* Fim config formulario */
+
+/* Config Titulo Contato */
+
+.span_contato{
+  color: red;
+}
+
+#bora {
+
+
+}
+.papo_1{
+  text-align: center;
+  margin-top: 1000px;
+  font-size: 4rem;
+  z-index: 1;
+  color: #fdc316;
+}
+
+.chama_3{
+  position: absolute;
+  margin-top: -350px;
+  height: 600px;
+  width: 600px;
+  left: 48%;
+  z-index: 1;
+}
+
+/*------------------------------------------------------------------
+   	Configuração Footer
+-------------------------------------------------------------------*/
+
+/* Botão - Home */
+
+.scrollup{
+  position: absolute;
+	width:40px;
+	height:40px;
+	text-indent:-9999px;
+  left: 96%;
+  z-index: 999;
+  margin-top: 850px;
+}
+
+.scrollup:hover{
+	opacity:0.8;
+}
+
+/* Imagens Footer */
+
+
+.cortado_footer{
+  position: absolute;
+  margin-top: 250px;
+  z-index: -1;
+}
+
+.cortado_footer2{
+  position: absolute;
+  margin-top: 250px;
+  left: 60%;
+  z-index: -1;
+}
+
+/*------------------------------------------------------------------
+   	Fim do Site
+-------------------------------------------------------------------*/
+
+.barra_bottom{
+  margin-top: 800px;
+  width: 100%;
+  height: 400px;
+  background-color: black;
+  position: absolute;
+  z-index: -3;
+}
+
+.logo_footer{
+  position: absolute;
+  height: 350px;
+  width: 350px;
+  left: 44%;
+  z-index: 1;
+  margin-top: 800px;
+}
+
+.endereço_footer{
+  position: absolute;
+  z-index: 1;
+  left: 34%;
+  margin-top: 1080px;
+  letter-spacing: 3px;
+  font-size: 20px;
+  color: white;
+}
+
+.telefone_footer{
+  position: absolute;
+  z-index: 1;
+  left: 44%;
+  margin-top: 1120px;
+  letter-spacing: 3px;
+  font-size: 20px;
+  color: white;
+}
+
+/* Horario funcionamento footer */
+
+.horario_funcionamento_footer{
+  position: absolute;
+  z-index: 1;
+  left: 7%;
+  margin-top: 980px;
+  letter-spacing: 3px;
+  font-size: 30px;
+  color: #fdc316;
+}
+
+.Ter-Qui {
+  position: absolute;
+  z-index: 1;
+  left: 2%;
+  margin-top: 1030px;
+  letter-spacing: 3px;
+  font-size: 20px;
+  color: white;
+}
+
+.horario-ter{
+  position: absolute;
+  z-index: 1;
+  left: 2.8%;
+  margin-top: 1080px;
+  letter-spacing: 3px;
+  font-size: 20px;
+  color: white;
+}
+
+.Sex-Dom {
+  position: absolute;
+  z-index: 1;
+  left: 13%;
+  margin-top: 1030px;
+  letter-spacing: 3px;
+  font-size: 20px;
+  color: white;
+}
+
+.horario-sex{
+  position: absolute;
+  z-index: 1;
+  left: 13.8%;
+  margin-top: 1080px;
+  letter-spacing: 3px;
+  font-size: 20px;
+  color: white;
+}
+
+/* Redes sociais do footer */
+
+.redes_sociais_footer{
+  position: absolute;
+  z-index: 1;
+  left: 85%;
+  margin-top: 980px;
+  letter-spacing: 3px;
+  font-size: 30px;
+  color: #fdc316;
+}
+
+.redes_sociais_f:hover{
+  color: red;
+}
+
+.fa-instagram{
+  position: absolute;
+  z-index: 1;
+  left: 86%;
+  margin-top: 1040px;
+}
+
+.fa-facebook{
+  position: absolute;
+  z-index: 1;
+  left: 91%;
+  margin-top: 1040px;
+}
+
+/*------------------------------------------------------------------
+   	Divs aleatórias
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+   	Hamburguer como o cursor do mouse
+-------------------------------------------------------------------*/
